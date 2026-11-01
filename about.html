@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Swami Vivekananda Centenary School</title>
+  <meta name="description" content="Learn about the history, vision, mission, and management structure of Swami Vivekananda Centenary School (SVCS), Chakdaha." />
+  
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://svcschakdaha.com/about.html" />
+  <meta property="og:title" content="About Us | Swami Vivekananda Centenary School" />
+  <meta property="og:description" content="Learn about the history, vision, mission, and management structure of Swami Vivekananda Centenary School (SVCS), Chakdaha." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://svcschakdaha.com/about.html" />
+  <link rel="stylesheet" href="css/page-hero.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/floating-admission.css" />
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="indicator"></span>
+        <span id="admissionBarText"></span>
+      </div>
+      <div class="top-bar-links">
+        <span id="topBarPhoneList"></span>
+        <a class="school-email" href=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Swami Vivekananda Centenary School - Home">
+        <div class="logo-mark">SVCS</div>
+        <div class="logo-text">
+          <span class="school-name">SVCS</span>
+          <small class="school-board"></small>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="notices.html">Notice Board</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="btn btn-primary" href="contact.html#enquiry" style="padding:0.8rem 1.6rem;font-size:1.4rem;">Enquire Now</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNavMenu" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+    
+    <!-- ========== 1. INNER PAGE HERO ========== -->
+    <section class="about-hero">
+      <div class="container">
+        <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">About Our School</span>
+        <h1>Heritage, Mission & Leadership</h1>
+        <p>Providing high-quality education rooted in the values and teachings of Swami Vivekananda.</p>
+      </div>
+    </section>
+
+    <!-- ========== BREADCRUMBS ========== -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span aria-current="page">About Us</span>
+      </div>
+    </nav>
+
+    <!-- ========== 2. SCHOOL INTRODUCTION ========== -->
+    <section class="section intro-section">
+      <div class="container intro-grid">
+        <div class="intro-content reveal">
+          <span class="badge">Who We Are</span>
+          <h2>A Legacy of Learning, Values & Excellence</h2>
+          <p id="aboutIntroductionText" class="text-lead"></p>
+          <p>Our educational approach emphasizes conceptual clarity, practical learning, and the all-round development of every child. Located in Chakdaha, Nadia district of West Bengal, our school offers education from Play Group through Class XII under the CISCE Board.</p>
+        </div>
+        <div class="intro-image-wrapper reveal">
+          <img
+    src="assets/images/about/school-introduction.jpeg"
+    alt="Swami Vivekananda Centenary School Campus"
+    class="intro-school-image"
+    loading="lazy"
+  />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. HISTORY / JOURNEY ========== -->
+    <section class="section history-section">
+      <div class="container history-container reveal">
+        <span class="badge">Our Journey</span>
+        <h2>School History & Establishment</h2>
+        <div class="history-card">
+          <h3 id="aboutEstablishmentHeading" hidden>Established in <span id="aboutEstYear"></span></h3>
+          <p id="aboutHistoryText"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. VISION, MISSION AND VALUES ========== -->
+    <section class="section vmv-section">
+      <div class="container">
+        <div class="vmv-grid">
+          <div class="vmv-card reveal">
+            <h3>Our Vision</h3>
+            <p id="aboutVisionText"></p>
+          </div>
+          <div class="vmv-card reveal">
+            <h3> Our Mission</h3>
+            <p id="aboutMissionText"></p>
+          </div>
+        </div>
+        <div class="values-container reveal">
+          <h3>Our Core Values</h3>
+          <div class="values-list" id="aboutValuesList">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. PRINCIPAL / DIRECTOR ========== -->
+    <section class="section about-principal-section" id="principal">
+      <div class="container">
+        <div class="section-header text-center reveal" style="margin-bottom:var(--space-xl);">
+          <span class="badge">Leadership</span>
+          <h2>Principal's Welcome Address</h2>
+        </div>
+        <div class="principal-full-grid">
+          <div class="principal-profile reveal">
+            <div class="principal-photo">👤</div>
+            <h3 id="aboutPrincipalName"></h3>
+            <p class="designation" id="aboutPrincipalRole">Principal</p>
+            <p class="text-small" id="aboutPrincipalQual"></p>
+          </div>
+          <div class="principal-message-content reveal" id="aboutPrincipalMessage">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. SCHOOL MANAGEMENT / LEADERSHIP ========== -->
+    <section class="section management-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="badge">Administration</span>
+          <h2>School Management</h2>
+        </div>
+        <div class="management-grid" id="aboutManagementList">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. WHY CHOOSE OUR SCHOOL ========== -->
+    <section class="section why-choose-section">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="badge">Our Strengths</span>
+          <h2>Why Choose SVCS?</h2>
+        </div>
+        <div class="why-choose-grid" id="aboutWhyChooseList">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. AFFILIATION / RECOGNITION ========== -->
+    <section class="section affiliation-section">
+      <div class="container affiliation-content reveal">
+        <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">Accreditation</span>
+        <h2>Board Affiliation & Registration</h2>
+        <div class="affiliation-box">
+          <p id="aboutAffiliationText">
+            <span class="school-name">Swami Vivekananda Centenary School</span> is affiliated with the Council for the Indian School Certificate Examinations (CISCE), New Delhi. We prepare students for the Class X (ICSE) and Class XII (ISC) examinations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 9. CAMPUS OVERVIEW ========== -->
+    <section class="section campus-overview-section">
+      <div class="container campus-grid">
+        <div class="campus-text reveal">
+          <span class="badge">Campus Environment</span>
+          <h2>A Place to Learn and Grow</h2>
+          <p class="text-lead" id="aboutCampusDesc"></p>
+          <a class="btn btn-outline" href="facilities.html" style="margin-top:var(--space-md);">Explore Facilities</a>
+        </div>
+        <div class="campus-images reveal">
+
+  <!-- Main Campus Image -->
+  <div class="campus-img large">
+    <img
+      src="assets/images/gallery/campus_1.jpeg"
+      alt="Swami Vivekananda Centenary School Campus"
+      loading="lazy"
+    >
+  </div>
+
+  <!-- Sports Image -->
+  <div class="campus-img">
+    <img
+      src="assets/images/gallery/sports_1.jpeg"
+      alt="School Sports Activities"
+      loading="lazy"
+    >
+  </div>
+
+  <!-- Another Campus Image -->
+  <div class="campus-img">
+    <img
+      src="assets/images/gallery/campus_2.jpeg"
+      alt="School Campus Environment"
+      loading="lazy"
+    >
+  </div>
+
+</div>
+      </div>
+    </section>
+
+    <!-- ========== 10. FINAL CTA ========== -->
+    <section class="section about-cta-section">
+      <div class="container about-cta-content reveal">
+        <h2>Join Our Community</h2>
+        <p class="text-lead">Discover how our academic programs and supportive environment can help your child succeed.</p>
+        <div class="about-cta-actions">
+          <a class="btn btn-primary" href="academics.html">Explore Academics</a>
+          <a class="btn btn-outline" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-column footer-about">
+        <h4 class="school-name">SVCS</h4>
+        <p class="school-tagline" style="color:rgba(255,255,255,0.7);"></p>
+        <p style="font-size:1.3rem;margin-top:10px;color:rgba(255,255,255,0.5);" class="school-board"></p>
+      </div>
+      <div class="footer-column footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="notices.html">Notice Board</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 <span class="school-address"></span></p>
+        <p>✉️ <a class="school-email" href=""></a></p>
+        <p>⏰ <span class="school-timings"></span></p>
+      </div>
+      <div class="footer-column footer-socials-col">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a class="footer-social-icon" id="footerFacebookLink" target="_blank" rel="noopener noreferrer" aria-label="Facebook">F</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 <span class="school-name">SVCS</span>. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Privacy Policy', '<p>Swami Vivekananda Centenary School respects the privacy of all students, parents, and visitors. This website is an informational portal and does not collect personal cookies or track user data without consent. Any inquiries sent through email are processed strictly for academic and administrative communication.</p>');}">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Terms & Conditions', '<p>All content, notices, syllabus guidelines, and visual assets on this website are the property of Swami Vivekananda Centenary School, Chakdaha. Information provided is subject to periodic updates by the school administration under CISCE board guidelines.</p>');}">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <strong style="font-size:1.6rem;color:var(--primary);">SVCS</strong>
+      <button class="modal-close" id="mobileNavClose" aria-label="Close Navigation">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About Us</a>
+      <a href="academics.html">Academics</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="notices.html">Notice Board</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="contact.html#enquiry" style="margin-top:var(--space-md);width:100%;">Enquire Now</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <p class="school-board"></p>
+    </div>
+  </div>
+
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="Back to Top">↑</a>
+
+  <script src="js/data/school.js"></script>
+  <script src="js/data/about.js"></script>
+  <script src="js/data/academics.js"></script>
+  <script src="js/data/facilities.js"></script>
+  <script src="js/data/achievements.js"></script>
+  <script src="js/data/faculty.js"></script>
+  <script src="js/data/notices.js"></script>
+  <script src="js/data/events.js"></script>
+  <script src="js/data/gallery.js"></script>
+  <script src="js/data/recruitment.js"></script>
+  <script src="js/data/testimonials.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

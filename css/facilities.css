@@ -1,0 +1,725 @@
+/**
+ * Swami Vivekananda Centenary School (SVCS)
+ * Facilities & Notices Page Specific Styles (css/facilities.css)
+ */
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.facilities-hero {
+  background: linear-gradient(135deg, #18324B 0%, #496456 50%, #C8953C 100%);
+  color: var(--card);
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.facilities-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.facilities-hero h1 {
+  color: #fff;
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.facilities-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.8rem;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   2. CAMPUS INTRODUCTION
+   ========================================================================== */
+.campus-intro {
+  background: var(--card);
+  padding-top: var(--space-xxl);
+  padding-bottom: var(--space-xl);
+}
+
+.campus-intro-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+
+.campus-intro-text p {
+  font-size: 1.7rem;
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   CAMPUS INTRODUCTION IMAGE
+   ========================================================================== */
+
+.campus-intro-visual {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--accent-light);
+
+  box-shadow: var(--shadow-md);
+}
+
+/* Actual Campus Image */
+.campus-intro-visual img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: var(--radius-lg);
+
+  transition: transform 0.6s ease;
+}
+
+/* Hover Animation */
+.campus-intro-visual:hover img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   3. CLASSROOMS SECTION
+   ========================================================================== */
+.classrooms-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+}
+
+.classrooms-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+
+/* =========================================
+   CLASSROOM IMAGE
+========================================= */
+
+.classroom-image {
+  width: 100%;
+  height: 350px;
+
+  overflow: hidden;
+  position: relative;
+
+  border-radius: var(--radius-md);
+
+  background: var(--accent-light);
+
+  box-shadow: var(--shadow-md);
+}
+
+/* Actual Image */
+.classroom-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: var(--radius-md);
+
+  transition: transform 0.5s ease;
+}
+
+/* Hover Animation */
+.classroom-image:hover img {
+  transform: scale(1.05);
+}
+
+.classroom-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.classroom-feature-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.classroom-feature-tag::before {
+  content: '✓';
+  color: var(--success);
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   4. LABORATORIES SECTION
+   ========================================================================== */
+.labs-section {
+  background: #18324B;
+  color: #fff;
+  padding: var(--space-xxl) 0;
+}
+
+.labs-section h2 {
+  color: #fff;
+}
+
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.lab-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: var(--transition);
+}
+
+.lab-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.lab-icon {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.lab-card h3 {
+  color: var(--cyan);
+  margin-bottom: var(--space-sm);
+  font-size: 2rem;
+}
+
+.lab-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   5. LIBRARY SECTION
+   ========================================================================== */
+.library-section {
+  background: var(--card);
+  padding: var(--space-xxl) 0;
+}
+
+.library-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+/* Library Image */
+.library-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-md);
+  background: var(--accent-light);
+  box-shadow: var(--shadow-md);
+}
+
+.library-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.library-image:hover img {
+  transform: scale(1.05);
+}
+/* ==========================================================================
+   6. SPORTS SECTION
+   ========================================================================== */
+.sports-facilities-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+}
+
+.sports-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+
+/* Sports Image */
+.sports-visual {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-md);
+  background: var(--accent-light);
+  box-shadow: var(--shadow-md);
+}
+
+.sports-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.sports-visual:hover img {
+  transform: scale(1.05);
+}
+
+.sports-activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.sport-tag {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  transition: var(--transition);
+}
+
+.sport-tag:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+/* ==========================================================================
+   7. ARTS & CULTURE
+   ========================================================================== */
+.arts-section {
+  background: var(--card);
+  padding: var(--space-xxl) 0;
+  border-top: 1px solid var(--border);
+}
+
+.arts-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+
+/* Arts & Cultural Image */
+.arts-visual {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-md);
+  background: var(--accent-light);
+  box-shadow: var(--shadow-md);
+}
+
+.arts-visual img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.arts-visual:hover img {
+  transform: scale(1.05);
+}
+/* ==========================================================================
+   8. STUDENT SERVICES
+   ========================================================================== */
+.services-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.service-card h4 {
+  margin-bottom: var(--space-xs);
+}
+
+.service-card p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   9. TECHNOLOGY
+   ========================================================================== */
+.tech-section {
+  background: linear-gradient(135deg, #18324B 0%, #A87928 60%, #C8953C 100%);
+  color: #fff;
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+
+.tech-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.tech-section h2 {
+  color: #fff;
+}
+
+.tech-section p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   10. SAFETY & SECURITY
+   ========================================================================== */
+.safety-section {
+  background: var(--card);
+  padding: var(--space-xxl) 0;
+}
+
+.safety-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+
+.safety-systems {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.safety-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.safety-item::before {
+  content: '🛡️';
+}
+
+.safety-visual {
+  background: var(--accent-light);
+  border-radius: var(--radius-md);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   11. CAMPUS GALLERY
+   ========================================================================== */
+.campus-gallery-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+}
+
+.gallery-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+/* =========================================
+   FACILITIES CAMPUS GALLERY
+========================================= */
+
+.gallery-item {
+  background: var(--accent-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  position: relative;
+  min-height: 200px;
+}
+
+/* Actual Gallery Image */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+/* Featured Image */
+.gallery-item.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 420px;
+}
+
+.gallery-item.featured img {
+  min-height: 420px;
+}
+
+/* Image Hover Animation */
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Image Caption */
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 2;
+
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.75)
+  );
+
+  color: #fff;
+
+  padding: var(--space-md);
+
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   12. FACILITIES SUMMARY
+   ========================================================================== */
+.facilities-summary {
+  background: var(--card);
+  padding: var(--space-xxl) 0;
+  border-top: 1px solid var(--border);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.summary-item {
+  padding: var(--space-md);
+}
+
+.summary-icon {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.summary-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   13. CTA SECTION
+   ========================================================================== */
+.facilities-cta {
+  background: linear-gradient(135deg, #18324B 0%, #A87928 50%, #C8953C 100%);
+  color: var(--card);
+  text-align: center;
+  padding: var(--space-xxl) 0;
+}
+
+.facilities-cta h2 {
+  color: #fff;
+  margin-bottom: var(--space-md);
+}
+
+.facilities-cta p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.6rem;
+  margin-bottom: var(--space-lg);
+}
+
+/* ==========================================================================
+   14. NOTICE BOARD PLACEHOLDER
+   ========================================================================== */
+.notice-placeholder-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+  border-top: 1px solid var(--border);
+}
+
+.notice-placeholder-inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.notice-placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-md);
+  display: block;
+  opacity: 0.5;
+}
+
+.notice-placeholder-inner p {
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .campus-intro-inner,
+  .classrooms-layout,
+  .library-layout,
+  .sports-layout,
+  .arts-layout,
+  .safety-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .gallery-mosaic {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item.featured {
+    grid-column: span 2;
+    grid-row: span 1;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .classroom-features,
+  .safety-systems {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item.featured {
+    grid-column: span 1;
+    min-height: 220px;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Classroom Image Responsive */
+
+@media (max-width: 1024px) {
+
+  .classroom-image {
+    height: 320px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .classroom-image {
+    height: 280px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .classroom-image {
+    height: 230px;
+  }
+
+}

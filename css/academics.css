@@ -1,0 +1,573 @@
+/**
+ * Swami Vivekananda Centenary School (SVCS)
+ * Academics Page Specific Styles (css/academics.css)
+ */
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.academics-hero {
+  background: linear-gradient(135deg, #18324B 0%, #496456 40%, #C8953C 100%);
+  color: #ffffff;
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.academics-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.academics-hero h1 {
+  color: #fff;
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.academics-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.8rem;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   2. OVERVIEW & PHILOSOPHY
+   ========================================================================== */
+.academic-overview {
+  padding-top: var(--space-xxl);
+  padding-bottom: var(--space-xl);
+  text-align: center;
+  background: var(--card);
+}
+
+.overview-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+/* ==========================================================================
+   3. GRADE STRUCTURE
+   ========================================================================== */
+.grade-structure {
+  background: var(--bg);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xxl);
+}
+
+.grade-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.grade-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.grade-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.grade-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 4px;
+  background: var(--accent);
+}
+
+.grade-card h3 {
+  color: var(--primary);
+  margin-bottom: var(--space-xs);
+  font-size: 2rem;
+}
+
+.grade-range {
+  display: inline-block;
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+/* ==========================================================================
+   4. CURRICULUM
+   ========================================================================== */
+.curriculum-section {
+  background: linear-gradient(135deg, #18324B 0%, #294A61 100%);
+  color: #ffffff;
+  padding: var(--space-xxl) 0;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+
+.curriculum-content h2 {
+  color: #fff;
+}
+
+.curriculum-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+.board-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+}
+/* ==========================================================================
+   CURRICULUM IMAGE
+   ========================================================================== */
+
+.curriculum-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.20);
+}
+
+/* Actual Image */
+.curriculum-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+  transition: transform 0.5s ease;
+}
+
+/* Hover Animation */
+.curriculum-image:hover img {
+  transform: scale(1.05);
+}
+/* ==========================================================================
+   5. TEACHING METHODOLOGY
+   ========================================================================== */
+.methodology-section {
+  padding: var(--space-xxl) 0;
+  background: var(--card);
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.method-item {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  padding: var(--space-lg);
+  background: var(--bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.method-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-subtle);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  flex-shrink: 0;
+}
+
+.method-text h4 {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-xs);
+  color: var(--primary);
+}
+
+.method-text p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   6. SUBJECTS
+   ========================================================================== */
+.subjects-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.subject-group {
+  background: var(--card);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--primary);
+}
+
+.subject-group h4 {
+  color: var(--primary-dark);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-sm);
+}
+
+.subject-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.subject-group ul li {
+  padding: var(--space-xs) 0;
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+}
+
+.subject-group ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   7. ASSESSMENT & EVALUATION
+   ========================================================================== */
+.assessment-section {
+  background: var(--card);
+  padding: var(--space-xxl) 0;
+}
+
+.assessment-timeline {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+}
+
+.assessment-step {
+  text-align: center;
+  position: relative;
+}
+
+.assessment-step-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto var(--space-md);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(200, 149, 60, 0.32);
+}
+
+.assessment-step h4 {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-xs);
+}
+
+.assessment-step p {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   8. CO-CURRICULAR & SPORTS
+   ========================================================================== */
+.activities-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+}
+
+.activities-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.activity-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.activity-icon {
+  font-size: 2rem;
+}
+/* ==========================================================================
+   SPORTS & ATHLETICS IMAGE
+   ========================================================================== */
+
+.sports-content {
+  margin-top: var(--space-lg);
+}
+
+/* Image Container */
+.sports-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  position: relative;
+  background: var(--primary-subtle);
+  box-shadow: var(--shadow-md);
+}
+
+/* Actual Sports Image */
+.sports-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md);
+  transition: transform 0.5s ease;
+}
+
+/* Hover Animation */
+.sports-image:hover img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   9. STUDENT DEVELOPMENT & CALENDAR
+   ========================================================================== */
+.dev-cal-section {
+  padding: var(--space-xxl) 0;
+  background: var(--card);
+}
+
+.dev-cal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+}
+
+.dev-list {
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-lg);
+}
+
+.dev-list li {
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg);
+  margin-bottom: var(--space-sm);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 1.5rem;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--space-lg);
+}
+
+.calendar-table th, .calendar-table td {
+  padding: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.calendar-table th {
+  background: var(--bg);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.calendar-table td:first-child {
+  font-weight: 600;
+  color: var(--secondary);
+  width: 120px;
+}
+
+/* ==========================================================================
+   10. FACULTY SECTION
+   ========================================================================== */
+.faculty-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.faculty-card {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.faculty-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.faculty-photo {
+  height: 180px;
+  background: linear-gradient(135deg, #F7F1E4, #E7EFE9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--primary);
+}
+
+.faculty-info {
+  padding: var(--space-md);
+}
+
+.faculty-info h4 {
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.faculty-designation {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-xs);
+}
+
+.faculty-subject {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.faculty-qual {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   11. CTA SECTION
+   ========================================================================== */
+.academics-cta {
+  background: linear-gradient(135deg, #18324B 0%, #A87928 50%, #C8953C 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: var(--space-xxl) 0;
+}
+
+.academics-cta h2 {
+  color: #fff;
+  margin-bottom: var(--space-md);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .curriculum-grid,
+  .activities-grid,
+  .dev-cal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .methodology-grid {
+    grid-template-columns: 1fr;
+  }
+  .activities-list {
+    grid-template-columns: 1fr;
+  }
+}
+/* Sports Image Responsive Design */
+
+@media (max-width: 768px) {
+  .sports-image {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sports-image {
+    height: 210px;
+  }
+}

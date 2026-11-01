@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Facilities | Swami Vivekananda Centenary School</title>
+  <meta name="description"
+    content="Explore the classrooms, laboratories, library, sports facilities, safety systems, and campus environment at Swami Vivekananda Centenary School, Chakdaha." />
+
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://svcschakdaha.com/facilities.html" />
+  <meta property="og:title" content="Campus Facilities | Swami Vivekananda Centenary School" />
+  <meta property="og:description" content="Explore the classrooms, laboratories, library, sports facilities, safety systems, and campus environment at Swami Vivekananda Centenary School, Chakdaha." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://svcschakdaha.com/facilities.html" />
+  <link rel="stylesheet" href="css/page-hero.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/facilities.css" />
+  <link rel="stylesheet" href="css/floating-admission.css" />
+</head>
+
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="indicator"></span>
+        <span id="admissionBarText"></span>
+      </div>
+      <div class="top-bar-links">
+        <span id="topBarPhoneList"></span>
+        <a class="school-email" href=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Swami Vivekananda Centenary School - Home">
+        <div class="logo-mark">SVCS</div>
+        <div class="logo-text">
+          <span class="school-name">SVCS</span>
+          <small class="school-board"></small>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a class="active" href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="notices.html">Notice Board</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="btn btn-primary" href="contact.html#enquiry" style="padding:0.8rem 1.6rem;font-size:1.4rem;">Enquire Now</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNavMenu"
+        aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+
+    <!-- ========== 1. FACILITIES HERO ========== -->
+    <section class="facilities-hero">
+      <div class="container">
+        <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">Campus & Resources</span>
+        <h1>Campus Facilities</h1>
+        <p>Explore our campus infrastructure, learning spaces, science laboratories, and student amenities.</p>
+      </div>
+    </section>
+
+    <!-- ========== BREADCRUMBS ========== -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span aria-current="page">Facilities</span>
+      </div>
+    </nav>
+
+    <!-- ========== 2. CAMPUS INTRODUCTION ========== -->
+    <section class="campus-intro reveal" id="facilities">
+      <div class="container campus-intro-inner">
+        <div class="campus-intro-text">
+          <span class="badge">Our Campus</span>
+          <h2>A Nurturing Environment for Learning</h2>
+          <p id="facCampusIntro"></p>
+          <p>From well-equipped classrooms to safe play areas, every space at SVCS reflects our commitment to quality
+            education and student well-being.</p>
+        </div>
+        <div class="campus-intro-visual">
+
+  <img
+    src="assets/images/gallery/svcs-campus_4.jpeg"
+    alt="Swami Vivekananda Centenary School Campus"
+    loading="lazy"
+  >
+
+</div>
+      </div>
+    </section>
+
+    <!-- ========== 3. CLASSROOMS & LEARNING SPACES ========== -->
+    <section class="classrooms-section reveal">
+      <div class="container classrooms-layout">
+        <!-- Classroom Image -->
+<div class="classroom-image">
+
+  <img
+    src="assets/images/gallery/classroomcampus_5.jpeg"
+    alt="Teacher conducting a lesson in a classroom"
+    loading="lazy"
+  >
+
+</div>
+        <div>
+          <span class="badge">Learning Spaces</span>
+          <h2 id="facClassroomTitle">Classrooms & Learning Spaces</h2>
+          <p id="facClassroomDesc"></p>
+          <div class="classroom-features" id="facClassroomFeatures">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. LABORATORIES ========== -->
+    <section class="labs-section reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">Practical Learning</span>
+          <h2>Our Laboratories</h2>
+          <p style="color:rgba(255,255,255,0.7);">Hands-on exploration and scientific discovery through well-equipped
+            laboratories.</p>
+        </div>
+        <div class="labs-grid" id="facLabsGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+<!-- ========== 5. LIBRARY ========== -->
+<section class="library-section reveal">
+
+  <div class="container library-layout">
+
+    <!-- Library Photograph -->
+    <div class="library-image">
+      <img
+        src="assets/images/facilities/library.jpeg"
+        alt="SVCS School Library"
+        loading="lazy"
+      >
+    </div>
+
+    <!-- Library Information -->
+    <div>
+      <span class="badge">Knowledge Hub</span>
+
+      <h2 id="facLibraryTitle">Central Library</h2>
+
+      <p class="text-lead" id="facLibraryDesc"></p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========== 6. SPORTS & PHYSICAL EDUCATION ========== -->
+<section class="sports-facilities-section reveal">
+
+  <div class="container sports-layout">
+
+    <!-- Sports Information -->
+    <div>
+      <span class="badge">Physical Education</span>
+
+      <h2 id="facSportsTitle">
+        Sports & Physical Education
+      </h2>
+
+      <p id="facSportsDesc"></p>
+
+      <div
+        class="sports-activities"
+        id="facSportsActivities"
+      >
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+
+    <!-- Sports Image -->
+    <div class="sports-visual">
+
+      <img
+        src="assets/images/facilities/playground.jpeg"
+        alt="SVCS School Sports Ground"
+        loading="lazy"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ========== 7. ARTS & CULTURAL SPACES ========== -->
+<section class="arts-section reveal">
+
+  <div class="container arts-layout">
+
+    <!-- Arts Information -->
+    <div>
+      <span class="badge">Creative Expression</span>
+
+      <h2 id="facArtsTitle">
+        Arts & Cultural Spaces
+      </h2>
+
+      <p class="text-lead" id="facArtsDesc"></p>
+    </div>
+
+    <!-- Cultural Image -->
+    <div class="arts-visual">
+
+      <img
+        src="assets/images/facilities/cultural.jpeg"
+        alt="SVCS Students Participating in Cultural Activities"
+        loading="lazy"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- ========== 8. STUDENT SERVICES ========== -->
+    <section class="services-section reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Student Well-Being</span>
+          <h2>Student Services</h2>
+          <p>Essential amenities ensuring comfort and safety throughout the school day.</p>
+        </div>
+        <div class="services-grid" id="facServicesGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 9. TECHNOLOGY INFRASTRUCTURE ========== -->
+    <section class="tech-section reveal">
+      <div class="container tech-content">
+        <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">Digital Learning</span>
+        <h2 id="facTechTitle">Technology Infrastructure</h2>
+        <p id="facTechDesc"></p>
+      </div>
+    </section>
+
+    <!-- ========== 10. SAFETY & SECURITY ========== -->
+    <section class="safety-section reveal">
+      <div class="container safety-layout">
+        <div>
+          <span class="badge">Campus Safety</span>
+          <h2 id="facSafetyTitle">Safety & Security</h2>
+          <p id="facSafetyDesc"></p>
+          <div class="safety-systems" id="facSafetySystems">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+        <div class="safety-visual">🔒</div>
+      </div>
+    </section>
+
+    <!-- ========== 11. CAMPUS GALLERY ========== -->
+    <section class="campus-gallery-section reveal" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Visual Tour</span>
+          <h2>Campus Gallery</h2>
+          <p>A glimpse into daily life, learning spaces, and co-curricular activities at SVCS.</p>
+        </div>
+        <div class="gallery-mosaic" id="facGalleryMosaic">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 12. FACILITIES SUMMARY ========== -->
+    <section class="facilities-summary reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">At a Glance</span>
+          <h2>What Our Campus Offers</h2>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-item">
+            <span class="summary-icon">📖</span>
+            <h4>Smart Classes</h4>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">🔬</span>
+            <h4>Science Labs</h4>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">💻</span>
+            <h4>Computer Lab</h4>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">📚</span>
+            <h4>Central Library</h4>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">⚽</span>
+            <h4>Sports Complex</h4>
+          </div>
+          <div class="summary-item">
+            <span class="summary-icon">🛡️</span>
+            <h4>Safety Systems</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 13. CTA ========== -->
+    <section class="facilities-cta reveal">
+      <div class="container">
+        <h2>Have Questions About Our Campus?</h2>
+        <p>We'd love to hear from you. Reach out for admissions, campus visits, or any enquiry.</p>
+        <div style="display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;margin-top:var(--space-md);">
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+          <a href="notices.html" class="btn btn-outline" style="background:#fff;color:var(--primary);border-color:#fff;">View Notice Board</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-column footer-about">
+        <h4 class="school-name">SVCS</h4>
+        <p class="school-tagline" style="color:rgba(255,255,255,0.7);"></p>
+        <p style="font-size:1.3rem;margin-top:10px;color:rgba(255,255,255,0.5);" class="school-board"></p>
+      </div>
+      <div class="footer-column footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="notices.html">Notice Board</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 <span class="school-address"></span></p>
+        <p>✉️ <a class="school-email" href=""></a></p>
+        <p>⏰ <span class="school-timings"></span></p>
+      </div>
+      <div class="footer-column footer-socials-col">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a class="footer-social-icon" id="footerFacebookLink" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">F</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 <span class="school-name">SVCS</span>. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Privacy Policy', '<p>Swami Vivekananda Centenary School respects the privacy of all students, parents, and visitors. This website is an informational portal and does not collect personal cookies or track user data without consent. Any inquiries sent through email are processed strictly for academic and administrative communication.</p>');}">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Terms & Conditions', '<p>All content, notices, syllabus guidelines, and visual assets on this website are the property of Swami Vivekananda Centenary School, Chakdaha. Information provided is subject to periodic updates by the school administration under CISCE board guidelines.</p>');}">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <strong style="font-size:1.6rem;color:var(--primary);">SVCS</strong>
+      <button class="modal-close" id="mobileNavClose" aria-label="Close Navigation">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="academics.html">Academics</a>
+      <a class="active" href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="notices.html">Notice Board</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="contact.html#enquiry" style="margin-top:var(--space-md);width:100%;">Enquire Now</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <p class="school-board"></p>
+    </div>
+  </div>
+
+  <!-- ===== GLOBAL MODAL ===== -->
+  <div class="modal-overlay" id="globalModal" aria-hidden="true" role="dialog">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle" style="margin-bottom:0;">Details</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close Dialog">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="Back to Top">↑</a>
+
+  <script src="js/data/school.js"></script>
+  <script src="js/data/about.js"></script>
+  <script src="js/data/academics.js"></script>
+  <script src="js/data/facilities.js"></script>
+  <script src="js/data/achievements.js"></script>
+  <script src="js/data/faculty.js"></script>
+  <script src="js/data/notices.js"></script>
+  <script src="js/data/events.js"></script>
+  <script src="js/data/gallery.js"></script>
+  <script src="js/data/recruitment.js"></script>
+  <script src="js/data/testimonials.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

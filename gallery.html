@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Gallery | Swami Vivekananda Centenary School</title>
+  <meta name="description" content="Explore campus life, academics, sports, cultural activities and events at Swami Vivekananda Centenary School, Chakdaha." />
+  <link rel="canonical" href="https://svcschakdaha.com/gallery.html" />
+  <meta property="og:title" content="School Gallery | Swami Vivekananda Centenary School" />
+  <meta property="og:description" content="Explore moments from our campus, classrooms, activities, sports and cultural events at Swami Vivekananda Centenary School, Chakdaha." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://svcschakdaha.com/gallery.html" />
+  <link rel="stylesheet" href="css/page-hero.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/floating-admission.css" />
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="indicator"></span>
+        <span id="admissionBarText"></span>
+      </div>
+      <div class="top-bar-links">
+        <span id="topBarPhoneList"></span>
+        <a class="school-email" href=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Swami Vivekananda Centenary School - Home">
+        <div class="logo-mark">SVCS</div>
+        <div class="logo-text">
+          <span class="school-name">SVCS</span>
+          <small class="school-board"></small>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="facilities.html">Facilities</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="notices.html">Notice Board</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="btn btn-primary" href="contact.html#enquiry" style="padding:0.8rem 1.6rem;font-size:1.4rem;">Enquire Now</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNavMenu" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ========== 1. INNER PAGE HERO ========== -->
+    <section class="gallery-hero">
+      <div class="container">
+        <span class="badge">Life at SVCS</span>
+        <h1>School Gallery</h1>
+        <p>Explore moments from our campus, classrooms, activities, sports and cultural events.</p>
+      </div>
+    </section>
+
+    <!-- ========== BREADCRUMBS ========== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Gallery</span>
+    </div>
+</nav>
+
+    <!-- ========== 2. FILTER & CONTROLS BAR ========== -->
+    <section class="gallery-filter-section">
+      <div class="container gallery-filter-bar">
+        <div class="gallery-filters" id="galleryCategoryFilters" role="toolbar" aria-label="Filter gallery by category">
+          <!-- Populated dynamically by script.js from SVCS_DATA.gallery -->
+        </div>
+        <div class="gallery-stats-counter" id="galleryItemCount" aria-live="polite">
+          Showing photos
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. PHOTO GALLERY GRID ========== -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid" aria-label="School photographs grid">
+          <!-- Populated dynamically by script.js from SVCS_DATA.gallery -->
+        </div>
+        
+        <!-- Empty state when a filter has no matching photos -->
+        <div class="gallery-empty" id="galleryEmptyState">
+          <div class="gallery-empty-icon">📷</div>
+          <h3>No Photos Found</h3>
+          <p>There are currently no photos in this category. Please select another filter above.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== LIGHTBOX / PHOTO VIEWER MODAL ===== -->
+  <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Photo Viewer" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo viewer">✕</button>
+    <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+    
+    <div class="lightbox-content">
+      <div class="lightbox-img-wrap">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      </div>
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-meta">
+          <span class="lightbox-category" id="lightboxCategory"></span>
+          <span class="lightbox-counter" id="lightboxCounter"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-column footer-about">
+        <h4 class="school-name">SVCS</h4>
+        <p class="school-tagline" style="color:rgba(255,255,255,0.7);"></p>
+        <p style="font-size:1.3rem;margin-top:10px;color:rgba(255,255,255,0.5);" class="school-board"></p>
+      </div>
+      <div class="footer-column footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="notices.html">Notice Board</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 <span class="school-address"></span></p>
+        <p>✉️ <a class="school-email" href=""></a></p>
+        <p>⏰ <span class="school-timings"></span></p>
+      </div>
+      <div class="footer-column footer-socials-col">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a class="footer-social-icon" id="footerFacebookLink" target="_blank" rel="noopener noreferrer" aria-label="Facebook">F</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 <span class="school-name">SVCS</span>. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Privacy Policy', '<p>Swami Vivekananda Centenary School respects the privacy of all students, parents, and visitors. This website is an informational portal and does not collect personal cookies or track user data without consent. Any inquiries sent through email are processed strictly for academic and administrative communication.</p>');}">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Terms & Conditions', '<p>All content, notices, syllabus guidelines, and visual assets on this website are the property of Swami Vivekananda Centenary School, Chakdaha. Information provided is subject to periodic updates by the school administration under CISCE board guidelines.</p>');}">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <strong style="font-size:1.6rem;color:var(--primary);">SVCS</strong>
+      <button class="modal-close" id="mobileNavClose" aria-label="Close Navigation">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="academics.html">Academics</a>
+      <a href="facilities.html">Facilities</a>
+      <a class="active" href="gallery.html">Gallery</a>
+      <a href="notices.html">Notice Board</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="contact.html#enquiry" style="margin-top:var(--space-md);width:100%;">Enquire Now</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <p class="school-board"></p>
+    </div>
+  </div>
+
+  <!-- ===== GLOBAL MODAL ===== -->
+  <div class="modal-overlay" id="globalModal" aria-hidden="true" role="dialog">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle" style="margin-bottom:0;">Details</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close Dialog">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="Back to Top">↑</a>
+
+  <!-- Script Dependencies -->
+  <script src="js/data/school.js"></script>
+  <script src="js/data/about.js"></script>
+  <script src="js/data/academics.js"></script>
+  <script src="js/data/facilities.js"></script>
+  <script src="js/data/achievements.js"></script>
+  <script src="js/data/faculty.js"></script>
+  <script src="js/data/notices.js"></script>
+  <script src="js/data/events.js"></script>
+  <script src="js/data/gallery.js"></script>
+  <script src="js/data/recruitment.js"></script>
+  <script src="js/data/testimonials.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

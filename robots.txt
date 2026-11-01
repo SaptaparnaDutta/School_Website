@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow private and system data
+Disallow: /js/data/
+
+# Sitemap location
+Sitemap: https://svcschakdaha.com/sitemap.xml

@@ -1,0 +1,561 @@
+/**
+ * Swami Vivekananda Centenary School (SVCS)
+ * Gallery Page Specific Styles (css/gallery.css)
+ * Color Hierarchy: Orange (Primary) -> White (Canvas) -> Blue (Secondary Accent)
+ */
+
+/* ==========================================================================
+   1. GALLERY HERO SECTION
+   ========================================================================== */
+.gallery-hero {
+  background: linear-gradient(135deg, #18324B 0%, #496456 50%, #C8953C 100%);
+  color: #ffffff;
+  padding: 100px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+                    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.gallery-hero .badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  margin-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.gallery-hero h1 {
+  color: #ffffff;
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-hero p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.8rem;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   2. FILTER & STATS BAR
+   ========================================================================== */
+.gallery-filter-section {
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-lg) 0;
+}
+
+.gallery-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.gallery-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.gallery-filter-btn {
+  font-family: var(--font-family);
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.gallery-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-subtle);
+  transform: translateY(-1px);
+}
+
+.gallery-filter-btn:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.gallery-filter-btn.active {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-orange);
+}
+
+.gallery-filter-btn .filter-count {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  padding: 0.1rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.gallery-filter-btn.active .filter-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.gallery-stats-counter {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   3. GALLERY GRID & CARDS
+   ========================================================================== */
+.gallery-section {
+  background: var(--bg);
+  padding: var(--space-xxl) 0;
+  min-height: 500px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.gallery-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-orange);
+}
+
+.gallery-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.gallery-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  background: var(--bg-subtle);
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(24, 50, 75, 0.08) 0%, rgba(24, 50, 75, 0.65) 100%);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-zoom-badge {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-full);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transform: translateY(8px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-zoom-badge {
+  transform: translateY(0);
+}
+
+.gallery-card-body {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #ffffff;
+}
+
+.gallery-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+}
+
+.gallery-category-tag {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  background: var(--primary-subtle);
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(200, 149, 60, 0.18);
+}
+
+.gallery-card-caption {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--heading);
+  line-height: 1.4;
+  margin-top: var(--space-xs);
+  margin-bottom: 0;
+}
+
+/* Fallback placeholder when image asset is loading / unavailable */
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F7F1E4 0%, #E7EFE9 100%);
+  color: var(--primary);
+  font-size: 4rem;
+}
+
+.gallery-placeholder span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: var(--space-sm);
+  color: var(--primary-dark);
+}
+
+/* ==========================================================================
+   4. EMPTY STATE
+   ========================================================================== */
+.gallery-empty {
+  display: none;
+  text-align: center;
+  padding: var(--space-xxl) var(--space-md);
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+  margin: var(--space-xl) auto;
+  max-width: 500px;
+}
+
+.gallery-empty-icon {
+  font-size: 4.8rem;
+  margin-bottom: var(--space-md);
+}
+
+.gallery-empty h3 {
+  font-size: 2rem;
+  color: var(--heading);
+  margin-bottom: var(--space-sm);
+}
+
+.gallery-empty p {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   5. LIGHTBOX / IMAGE VIEWER
+   ========================================================================== */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 20, 40, 0.93);
+  backdrop-filter: blur(10px);
+  padding: var(--space-md);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-lightbox.open {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: lightboxPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes lightboxPop {
+  from {
+    transform: scale(0.94);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-img-wrap {
+  position: relative;
+  max-width: 100%;
+  max-height: 74vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 74vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  background: #0f172a;
+}
+
+.lightbox-caption-bar {
+  margin-top: var(--space-md);
+  text-align: center;
+  max-width: 720px;
+  color: #ffffff;
+  padding: 0 var(--space-md);
+}
+
+.lightbox-caption {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: var(--space-xs);
+  line-height: 1.4;
+}
+
+.lightbox-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lightbox-category {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+/* Lightbox Navigation Buttons */
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 2.2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  z-index: 10;
+  user-select: none;
+}
+
+.lightbox-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: var(--shadow-orange);
+}
+
+.lightbox-btn:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 1.8rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  z-index: 10;
+}
+
+.lightbox-close:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: rotate(90deg);
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-hero {
+    padding: 80px 0 60px;
+  }
+
+  .gallery-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .lightbox-prev {
+    left: 10px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox-close {
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-img {
+    max-height: 65vh;
+  }
+
+  .lightbox-caption {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-filter-btn {
+    padding: 0.6rem 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  .lightbox-prev,
+  .lightbox-next {
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .lightbox-prev {
+    left: 30%;
+  }
+
+  .lightbox-next {
+    right: 30%;
+  }
+
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    transform: scale(1.08);
+  }
+}

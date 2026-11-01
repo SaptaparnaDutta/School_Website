@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notice Board & Announcements | Swami Vivekananda Centenary School</title>
+  <meta name="description"
+    content="Official Notice Board of Swami Vivekananda Centenary School, Chakdaha. View current notices, holiday schedules, examination circulars, and archive." />
+
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://svcschakdaha.com/notices.html" />
+  <meta property="og:title" content="Notice Board | Swami Vivekananda Centenary School" />
+  <meta property="og:description" content="Official Notice Board of Swami Vivekananda Centenary School, Chakdaha. Stay updated with all academic and general circulars." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://svcschakdaha.com/notices.html" />
+  <link rel="stylesheet" href="css/page-hero.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/notices.css" />
+  <link rel="stylesheet" href="css/floating-admission.css" />
+</head>
+
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="indicator"></span>
+        <span id="admissionBarText"></span>
+      </div>
+      <div class="top-bar-links">
+        <span id="topBarPhoneList"></span>
+        <a class="school-email" href=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Swami Vivekananda Centenary School - Home">
+        <div class="logo-mark">SVCS</div>
+        <div class="logo-text">
+          <span class="school-name">SVCS</span>
+          <small class="school-board"></small>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="notices.html">Notice Board</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="btn btn-primary" href="contact.html#enquiry" style="padding:0.8rem 1.6rem;font-size:1.4rem;">Enquire Now</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNavMenu"
+        aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+
+    <!-- ========== 1. NOTICES HERO ========== -->
+    <section class="facilities-hero" style="background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--secondary-dark) 100%);">
+      <div class="container">
+        <span class="badge" style="background:rgba(255,255,255,0.2);color:#fff;">Official Circulars &amp; Alerts</span>
+        <h1>Notice Board</h1>
+        <p style="color: #100b0b;">Stay informed with official circulars, exam routines, holiday notifications, and institutional announcements.</p>
+      </div>
+    </section>
+
+    <!-- ========== BREADCRUMBS ========== -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span aria-current="page">Notice Board</span>
+      </div>
+    </nav>
+
+    <!-- ========== 2. NOTICE BOARD MAIN SECTION ========== -->
+    <section class="noticeboard-section" id="notices" style="padding-top:var(--space-xl);padding-bottom:var(--space-xxl);">
+      <div class="container">
+        <div class="noticeboard-header">
+          <span class="badge">📋 Current Announcements</span>
+          <h2>Latest School Notices</h2>
+          <p>Real-time official updates for parents, students, and staff members.</p>
+        </div>
+
+        <!-- Featured Notices (Newest 1–2) -->
+        <div class="featured-notices" id="nbFeaturedNotices">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Remaining Current Notices (3–5) -->
+        <h3 class="current-notices-heading" id="nbCurrentHeading" style="display:none;margin-top:var(--space-xl);margin-bottom:var(--space-md);">More Current Notices</h3>
+        <div class="current-notices-list" id="nbCurrentNotices">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Archive Section -->
+        <div class="archive-section" id="nbArchiveSection" style="display:none;margin-top:var(--space-xxl);">
+          <div class="section-header" style="text-align:left;margin-bottom:var(--space-lg);">
+            <span class="badge">Historical Records</span>
+            <h3>Notice Archive &amp; Search</h3>
+            <p>Search or filter past notices by category and year.</p>
+          </div>
+
+          <div class="archive-controls">
+            <input type="text" class="archive-search" id="nbArchiveSearch" placeholder="🔍 Search notices..." aria-label="Search archived notices" />
+            <select class="archive-filter-select" id="nbCategoryFilter" aria-label="Filter by category">
+              <option value="all">All Categories</option>
+            </select>
+            <select class="archive-filter-select" id="nbYearFilter" aria-label="Filter by year">
+              <option value="all">All Years</option>
+            </select>
+          </div>
+
+          <div class="archive-list" id="nbArchiveList">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div class="notice-empty-state" id="nbArchiveEmpty" style="display:none;">
+            <span class="notice-empty-icon">🔍</span>
+            <h4>No notices found</h4>
+            <p>Try a different search term or filter.</p>
+          </div>
+        </div>
+
+        <!-- Global Empty State (0 published notices) -->
+        <div class="notice-empty-state" id="nbGlobalEmpty" style="display:none;">
+          <span class="notice-empty-icon">📋</span>
+          <h4>No Notices Published</h4>
+          <p>There are no notices available at this time. Please check back later.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. CTA ========== -->
+    <section class="facilities-cta reveal" style="background:var(--primary);color:#fff;padding:var(--space-xl) 0;text-align:center;">
+      <div class="container">
+        <h2 style="color:#fff;">Need Specific Academic or Admission Information?</h2>
+        <p style="color:rgba(255,255,255,0.85);max-width:640px;margin:0 auto var(--space-lg);">Our office desk is ready to assist parents and prospective candidates during working hours.</p>
+        <div style="display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-secondary">Contact School Office</a>
+          <a href="facilities.html" class="btn btn-outline" style="background:#fff;color:var(--primary);border-color:#fff;">Explore Facilities</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-column footer-about">
+        <h4 class="school-name">SVCS</h4>
+        <p class="school-tagline" style="color:rgba(255,255,255,0.7);"></p>
+        <p style="font-size:1.3rem;margin-top:10px;color:rgba(255,255,255,0.5);" class="school-board"></p>
+      </div>
+      <div class="footer-column footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="notices.html">Notice Board</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 <span class="school-address"></span></p>
+        <p>✉️ <a class="school-email" href=""></a></p>
+        <p>⏰ <span class="school-timings"></span></p>
+      </div>
+      <div class="footer-column footer-socials-col">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a class="footer-social-icon" id="footerFacebookLink" target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook">F</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 <span class="school-name">SVCS</span>. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Privacy Policy', '<p>Swami Vivekananda Centenary School respects the privacy of all students, parents, and visitors. This website is an informational portal and does not collect personal cookies or track user data without consent. Any inquiries sent through email are processed strictly for academic and administrative communication.</p>');}">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Terms & Conditions', '<p>All content, notices, syllabus guidelines, and visual assets on this website are the property of Swami Vivekananda Centenary School, Chakdaha. Information provided is subject to periodic updates by the school administration under CISCE board guidelines.</p>');}">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <strong style="font-size:1.6rem;color:var(--primary);">SVCS</strong>
+      <button class="modal-close" id="mobileNavClose" aria-label="Close Navigation">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="academics.html">Academics</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="active" href="notices.html">Notice Board</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="contact.html#enquiry" style="margin-top:var(--space-md);width:100%;">Enquire Now</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <p class="school-board"></p>
+    </div>
+  </div>
+
+  <!-- ===== GLOBAL MODAL ===== -->
+  <div class="modal-overlay" id="globalModal" aria-hidden="true" role="dialog">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle" style="margin-bottom:0;">Details</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close Dialog">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="Back to Top">↑</a>
+
+  <script src="js/data/school.js"></script>
+  <script src="js/data/about.js"></script>
+  <script src="js/data/academics.js"></script>
+  <script src="js/data/facilities.js"></script>
+  <script src="js/data/achievements.js"></script>
+  <script src="js/data/faculty.js"></script>
+  <script src="js/data/notices.js"></script>
+  <script src="js/data/events.js"></script>
+  <script src="js/data/gallery.js"></script>
+  <script src="js/data/recruitment.js"></script>
+  <script src="js/data/testimonials.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

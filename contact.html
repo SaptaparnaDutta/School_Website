@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us & Careers | Swami Vivekananda Centenary School</title>
+  <meta name="description" content="Get in touch with Swami Vivekananda Centenary School (SVCS), Chakdaha. Send enquiry forms, map directions, and inspect job vacancies." />
+  
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://svcschakdaha.com/contact.html" />
+  <meta property="og:title" content="Contact Us & Careers | Swami Vivekananda Centenary School" />
+  <meta property="og:description" content="Get in touch with Swami Vivekananda Centenary School (SVCS), Chakdaha. Send enquiry forms, map directions, and inspect job vacancies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://svcschakdaha.com/contact.html" />
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/floating-admission.css" />
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================================================
+       TOP BAR (ANNOUNCEMENTS & CONTACT QUICK LINKS)
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="indicator"></span>
+        <span id="admissionBarText"></span>
+      </div>
+      <div class="top-bar-links">
+        <span id="topBarPhoneList"></span>
+        <a class="school-email" href=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION MENU
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">
+        <div class="logo-mark">SVCS</div>
+        <div class="logo-text">
+          <span class="school-name"></span>
+          <small class="school-board"></small>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="notices.html">Notice Board</a>
+        <a class="active" href="contact.html">Contact Us</a>
+        <a class="btn btn-primary" href="contact.html#enquiry" style="padding: 0.8rem 1.6rem; font-size: 1.4rem;">Enquire Now</a>
+      </nav>
+
+      <!-- Hamburger toggle button for Mobile -->
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNavMenu" aria-label="Open Navigation Menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT WRAPPER
+       ========================================================================== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- Page Hero Banner -->
+    <section class="section page-hero">
+      <div class="container">
+        <span class="badge">Get In Touch</span>
+        <h1>Contact Information & Careers</h1>
+        <p>Submit general/admission inquiries or view active teacher vacancies.</p>
+      </div>
+    </section>
+
+    <!-- Contact details, Maps and Enquiry Form section -->
+    <section class="section" id="enquiry">
+      <div class="container contact-container reveal">
+        
+        <!-- Contact Address & Map Details -->
+        <div class="contact-info-section">
+          <h2>School Office</h2>
+          <p>You can visit our school office during working hours or connect with us via the phone lines listed below.</p>
+          
+          <div class="contact-info-grid">
+            <div class="contact-info-card">
+              <div class="contact-info-icon">📍</div>
+              <div class="contact-info-content">
+                <h3>Office Address</h3>
+                <p id="contactPageAddress">Dhanicha (Near B.D.O. Office), Chakdaha, Nadia, West Bengal - 741222, India</p>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Swami%20Vivekananda%20Centenary%20School%2C%20Dhanicha%2C%20Chakdaha%2C%20Nadia%2C%20West%20Bengal%20741222" id="contactPageDirectionsBtn" target="_blank" rel="noopener noreferrer">Get Directions →</a>
+              </div>
+            </div>
+            
+            <div class="contact-info-card">
+              <div class="contact-info-icon">📞</div>
+              <div class="contact-info-content">
+                <h3>Phone Numbers</h3>
+                <p id="contactPagePhones"></p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-info-icon">✉️</div>
+              <div class="contact-info-content">
+                <h3>Official Email</h3>
+                <p><a href="mailto:svcs.12@rediffmail.com" id="contactPageEmail">svcs.12@rediffmail.com</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-info-card">
+              <div class="contact-info-icon">⏰</div>
+              <div class="contact-info-content">
+                <h3>Office Hours</h3>
+                <p id="contactPageHours"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maps iframe display area -->
+          <div class="map-container" id="contactPageMapContainer">
+            <div class="map-placeholder"></div>
+          </div>
+        </div>
+
+        <!-- Enquiry Contact Form Card -->
+        <div class="contact-form-card">
+          <h3>Send an Enquiry</h3>
+          <p style="margin-bottom: var(--space-lg); color: var(--text-muted); font-size: 1.4rem;">Fill out this form and your default email client will open to send the enquiry directly to our admission team.</p>
+          
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Full Name <span style="color:#dc2626;">*</span></label>
+              <input type="text" id="contactName" class="form-control" placeholder="Enter your full name" autocomplete="name" minlength="2" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSenderEmail">Email Address <span style="color:#dc2626;">*</span></label>
+              <input type="email" id="contactSenderEmail" class="form-control" placeholder="name@domain.com" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Phone Number <span style="color:#dc2626;">*</span></label>
+              <input type="tel" id="contactPhone" class="form-control" placeholder="10-digit mobile number" inputmode="tel" pattern="[+0-9() .-]{7,20}" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Inquiry Area <span style="color:#dc2626;">*</span></label>
+              <select id="contactSubject" class="form-control" required>
+                <option value="" disabled selected>Select an option...</option>
+                <option value="Admission Enquiry">Admission Enquiry</option>
+                <option value="General Query">General Query</option>
+                <option value="Transport Enquiry">Transport Enquiry</option>
+                <option value="Careers & Vacancy">Careers & Vacancy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message <span style="color:#dc2626;">*</span></label>
+              <textarea id="contactMessage" class="form-control" placeholder="Write your message here..." minlength="10" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-sm); padding: 1.2rem; font-size: 1.5rem;">Prepare Email</button>
+          </form>
+          <p id="contactFormFeedback" class="form-feedback" role="status" aria-live="polite" hidden></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Careers / Recruitment Section -->
+    <section class="recruitment-section" id="careers">
+      <div class="container reveal">
+        <div class="recruitment-header">
+          <h2>Join Our Team</h2>
+          <p id="recruitmentIntroText"></p>
+        </div>
+        
+        <!-- Target container for vacancy listing -->
+        <div id="vacanciesListContainer" class="vacancies-grid">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="recruitmentEmptyState" class="recruitment-empty-state" style="display:none;">
+          <span class="recruitment-empty-icon">🤝</span>
+          <h3>No Current Vacancies</h3>
+          <p>There are currently no advertised teaching or staff positions. Please check back later or contact the school office for future opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER SYSTEM
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-column footer-about">
+        <h4 class="school-name">SVCS</h4>
+        <p class="school-tagline">Building bright futures with value-oriented education.</p>
+        <p style="font-size: 1.3rem; margin-top: 10px; color: rgba(255,255,255,0.6);" class="school-board"></p>
+      </div>
+      
+      <div class="footer-column footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="notices.html">Notice Board</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 <span class="school-address"></span></p>
+        <p>✉️ <a class="school-email" href=""></a></p>
+        <p>⏰ <span class="school-timings"></span></p>
+      </div>
+      
+      <div class="footer-column footer-socials-col">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a class="footer-social-icon" id="footerFacebookLink" target="_blank" aria-label="Facebook">F</a>
+        </div>
+        <p style="font-size: 1.2rem; margin-top: 20px; color: rgba(255,255,255,0.5);">
+          No UPI/card payments are accepted on this website. Keep transactions secure.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          &copy; 2026 <span class="school-name">Swami Vivekananda Centenary School</span>. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Privacy Policy', '<p>Swami Vivekananda Centenary School respects the privacy of all students, parents, and visitors. This website is an informational portal and does not collect personal cookies or track user data without consent. Any inquiries sent through email are processed strictly for academic and administrative communication.</p>');}">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Terms & Conditions', '<p>All content, notices, syllabus guidelines, and visual assets on this website are the property of Swami Vivekananda Centenary School, Chakdaha. Information provided is subject to periodic updates by the school administration under CISCE board guidelines.</p>');}">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE DRAWER NAVIGATION & ACCESSIBILITY OVERLAYS
+       ========================================================================== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="mobile-nav-header">
+      <strong class="school-name" style="font-size: 1.6rem; color: var(--primary);">SVCS</strong>
+      <button class="modal-close" id="mobileNavClose" aria-label="Close Mobile Navigation">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="academics.html">Academics</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="notices.html">Notice Board</a>
+      <a class="active" href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="contact.html#enquiry" style="margin-top: var(--space-md); width: 100%;">Enquire Now</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <p class="school-board"></p>
+      <p style="font-size: 1.1rem; margin-top: 10px;">Contact: svcs.12@rediffmail.com</p>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL DIALOG / MODAL (NOTICES ARCHIVE & CV VIEWING SKELETON)
+       ========================================================================== -->
+  <div class="modal-overlay" id="globalModal" aria-hidden="true" role="dialog">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle" style="margin-bottom: 0;">Notification Details</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close Dialog">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Rendered dynamically by script -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Reusable Scroll Up Anchor -->
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="Back to Top">↑</a>
+
+  <!-- Script Modules -->
+  <script src="js/data/school.js"></script>
+  <script src="js/data/about.js"></script>
+  <script src="js/data/academics.js"></script>
+  <script src="js/data/facilities.js"></script>
+  <script src="js/data/achievements.js"></script>
+  <script src="js/data/faculty.js"></script>
+  <script src="js/data/notices.js"></script>
+  <script src="js/data/events.js"></script>
+  <script src="js/data/gallery.js"></script>
+  <script src="js/data/recruitment.js"></script>
+  <script src="js/data/testimonials.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

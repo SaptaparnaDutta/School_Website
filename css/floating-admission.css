@@ -1,0 +1,346 @@
+/**
+ * Swami Vivekananda Centenary School (SVCS)
+ * Floating Admission Island Widget (css/floating-admission.css)
+ *
+ * Palette used:
+ *   #C8953C  (Bright Orange)  — main background
+ *   #18324B  (Deep Navy)      — close button, tag bg
+ *   #E7EFE9  (Light Cyan)     — secondary text tint
+ *   #C8953C  (Golden Yellow)  — accent pulse dot
+ *   white                     — text
+ */
+
+/* ==========================================================================
+   FLOATING ISLAND - Base
+   ========================================================================== */
+.floating-admission-island {
+  position: fixed;
+  z-index: 1020;
+  bottom: 24px;
+  right: 24px;
+  width: 280px;
+  max-width: calc(100vw - 32px);
+  background: linear-gradient(135deg, #C8953C 0%, #A87928 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 32px rgba(200, 149, 60, 0.45),
+    0 2px 8px  rgba(24, 50, 75, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  pointer-events: none;
+  cursor: pointer;
+  transition:
+    opacity   0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.floating-admission-island.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.floating-admission-island.is-visible:not(.status-closed):hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 12px 38px rgba(200, 149, 60, 0.52),
+    0 3px 10px rgba(24, 50, 75, 0.22);
+}
+
+.floating-admission-island.is-dismissed {
+  opacity: 0 !important;
+  transform: translateY(24px) scale(0.95) !important;
+  pointer-events: none !important;
+}
+
+.floating-admission-island.pos-bottom-left {
+  right: auto;
+  left: 24px;
+}
+
+/* ==========================================================================
+   INNER LAYOUT
+   ========================================================================== */
+.fadm-inner {
+  padding: 18px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+/* ==========================================================================
+   HEADER ROW: pulse dot + title + close button
+   ========================================================================== */
+.fadm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.fadm-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Animated pulse dot */
+.fadm-pulse-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #C8953C;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 rgba(200, 149, 60, 0.65);
+  animation: fadm-pulse 2s ease-in-out infinite;
+}
+
+@keyframes fadm-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(200, 149, 60, 0.65); }
+  60%  { box-shadow: 0 0 0 8px rgba(200, 149, 60, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(200, 149, 60, 0); }
+}
+
+.fadm-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Close/dismiss button */
+.fadm-close {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  color: #ffffff;
+  font-size: 1.4rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+  font-family: var(--font-family, 'Inter', sans-serif);
+}
+
+.fadm-close:hover {
+  background: rgba(255, 255, 255, 0.32);
+  transform: rotate(90deg);
+}
+
+.fadm-close:focus-visible {
+  outline: 2px solid #E7EFE9;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   BODY: classes tag + message
+   ========================================================================== */
+.fadm-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fadm-classes-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(24, 50, 75, 0.55);
+  border: 1px solid rgba(160, 231, 240, 0.35);
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #E7EFE9;
+  letter-spacing: 0.4px;
+  align-self: flex-start;
+}
+
+.fadm-message {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FOOTER: Apply Now CTA
+   ========================================================================== */
+.fadm-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.fadm-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  color: #A87928;
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.fadm-cta-btn:hover {
+  background: #18324B;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(24, 50, 75, 0.35);
+}
+
+.fadm-cta-btn:focus-visible {
+  outline: 2px solid #E7EFE9;
+  outline-offset: 2px;
+}
+
+.fadm-cta-arrow {
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.fadm-cta-btn:hover .fadm-cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   CLOSED-STATUS VARIANT
+   ========================================================================== */
+.floating-admission-island.status-closed {
+  background: linear-gradient(135deg, #18324B 0%, #294A61 100%);
+  box-shadow:
+    0 8px 32px rgba(24, 50, 75, 0.40),
+    0 2px 8px  rgba(0, 0, 0, 0.15);
+}
+
+.floating-admission-island.status-closed .fadm-cta-btn {
+  background: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.floating-admission-island.status-closed .fadm-pulse-dot {
+  background: #647D70;
+  animation: none;
+}
+
+/* ==========================================================================
+   DECORATIVE ACCENT STRIPE (top edge)
+   ========================================================================== */
+.floating-admission-island::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  background: linear-gradient(90deg, #C8953C 0%, rgba(200, 149, 60, 0) 100%);
+  border-radius: 0 0 4px 4px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 768px) {
+  .floating-admission-island {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    width: auto;
+    border-radius: 16px;
+  }
+
+  .floating-admission-island.pos-bottom-left {
+    left: 16px;
+    right: 16px;
+  }
+
+  .fadm-inner {
+    padding: 14px 16px 12px;
+  }
+
+  .fadm-title {
+    font-size: 1.35rem;
+  }
+
+  .fadm-message {
+    font-size: 1.2rem;
+  }
+
+  .fadm-cta-btn {
+    font-size: 1.25rem;
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .fadm-footer {
+    justify-content: stretch;
+  }
+
+  .fadm-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .floating-admission-island {
+    transition: opacity 0.15s ease;
+    transform: none !important;
+  }
+
+  .fadm-pulse-dot {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   BACK-TO-TOP BUTTON CLEARANCE
+   Ensures the back-to-top button smoothly moves above the admission island
+   when both are in the bottom-right corner, avoiding any overlap.
+   ========================================================================== */
+body.fadm-visible:not(.fadm-pos-left) .back-to-top,
+body:has(.floating-admission-island.is-visible:not(.pos-bottom-left)) .back-to-top {
+  bottom: 200px !important;
+}
+
+@media (max-width: 768px) {
+  body.fadm-visible .back-to-top,
+  body:has(.floating-admission-island.is-visible) .back-to-top {
+    bottom: 180px !important;
+  }
+}
+

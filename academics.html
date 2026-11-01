@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics | Swami Vivekananda Centenary School</title>
+  <meta name="description" content="Explore the curriculum, teaching methodology, subjects, and faculty at Swami Vivekananda Centenary School, Chakdaha." />
+  
+  <!-- Canonical & Open Graph -->
+  <link rel="canonical" href="https://svcschakdaha.com/academics.html" />
+  <meta property="og:title" content="Academics | Swami Vivekananda Centenary School" />
+  <meta property="og:description" content="Explore the curriculum, teaching methodology, subjects, and faculty at Swami Vivekananda Centenary School, Chakdaha." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://svcschakdaha.com/academics.html" />
+  <link rel="stylesheet" href="css/page-hero.css">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/academics.css" />
+  <link rel="stylesheet" href="css/floating-admission.css" />
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-notice">
+        <span class="indicator"></span>
+        <span id="admissionBarText"></span>
+      </div>
+      <div class="top-bar-links">
+        <span id="topBarPhoneList"></span>
+        <a class="school-email" href=""></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Swami Vivekananda Centenary School - Home">
+        <div class="logo-mark">SVCS</div>
+        <div class="logo-text">
+          <span class="school-name">SVCS</span>
+          <small class="school-board"></small>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a class="active" href="academics.html">Academics</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="notices.html">Notice Board</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="btn btn-primary" href="contact.html#enquiry" style="padding:0.8rem 1.6rem;font-size:1.4rem;">Enquire Now</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNavMenu" aria-label="Open Navigation Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="main-content" id="mainContent">
+
+    <!-- ========== 1. ACADEMICS HERO ========== -->
+    <section class="academics-hero">
+      <div class="container">
+        <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">Academic Journey</span>
+        <h1>Academics</h1>
+        <p>A rigorous syllabus structure designed to nurture critical thinking and scientific inquiry.</p>
+      </div>
+    </section>
+
+    <!-- ========== BREADCRUMBS ========== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Academics</span>
+    </div>
+</nav>
+
+    <!-- ========== 2. ACADEMIC OVERVIEW ========== -->
+    <section class="academic-overview reveal">
+      <div class="container">
+        <span class="badge">Our Philosophy</span>
+        <h2>Learning at SVCS</h2>
+        <p class="overview-text" id="acadOverview"></p>
+      </div>
+    </section>
+
+    <!-- ========== 3. GRADE STRUCTURE ========== -->
+    <section class="grade-structure reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Academic Stages</span>
+          <h2>Classes & Grade Structure</h2>
+        </div>
+        <div class="grade-grid" id="acadGradeGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. CURRICULUM ========== -->
+    <section class="curriculum-section reveal">
+      <div class="container curriculum-grid">
+        <div class="curriculum-content">
+          <span class="badge" style="background:rgba(255,255,255,0.15);color:#fff;">Curriculum Framework</span>
+          <h2>Syllabus & Core Guidelines</h2>
+          <div class="board-badge">
+             <span id="acadBoard">CISCE (ICSE / ISC)</span>
+          </div>
+          <p id="acadCurriculumDesc"></p>
+        </div>
+        <div class="curriculum-image">
+
+  <img
+    src="assets/images/gallery/academy_campus_3.jpeg"
+    alt="Teacher conducting a lesson in a smart classroom"
+    loading="lazy"
+  >
+
+</div>
+      </div>
+    </section>
+
+    <!-- ========== 5. TEACHING METHODOLOGY ========== -->
+    <section class="methodology-section reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Our Approach</span>
+          <h2>Teaching Methodology</h2>
+        </div>
+        <div class="methodology-grid" id="acadMethodGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. SUBJECTS ========== -->
+    <section class="subjects-section reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">What We Teach</span>
+          <h2>Subject Offerings</h2>
+          <p>Comprehensive subject selections across different educational stages.</p>
+        </div>
+        <div class="subjects-grid" id="acadSubjectsGrid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. ASSESSMENT & EVALUATION ========== -->
+    <section class="assessment-section reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Evaluation System</span>
+          <h2>Assessment & Feedback</h2>
+          <p>We believe in continuous evaluation to foster improvement rather than stress.</p>
+        </div>
+        <div class="assessment-timeline" id="acadAssessmentTimeline">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8 & 9. CO-CURRICULAR & SPORTS ========== -->
+    <section class="activities-section reveal">
+      <div class="container activities-grid">
+        <!-- Co-Curricular -->
+        <div>
+          <span class="badge">Beyond Books</span>
+          <h2>Co-Curricular Activities</h2>
+          <p>We provide various opportunities for students to explore their creative talents.</p>
+          <div class="activities-list" id="acadCoCurricularList">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+        <!-- Sports -->
+<div>
+  <span class="badge">Physical Education</span>
+  <h2>Sports & Athletics</h2>
+
+  <div class="sports-content">
+
+    <!-- Sports Image -->
+    <div class="sports-image">
+      <img
+        src="assets/images/gallery/sportsfootball_1.jpeg"
+        alt="Students participating in school sports activities"
+        loading="lazy"
+      >
+    </div>
+
+    <!-- Sports Description -->
+    <p id="acadSportsDesc"></p>
+
+  </div>
+</div>
+      </div>
+    </section>
+
+    <!-- ========== 10 & 11. STUDENT DEV & CALENDAR ========== -->
+    <section class="dev-cal-section reveal">
+      <div class="container dev-cal-grid">
+        <div>
+          <span class="badge">Holistic Growth</span>
+          <h2>Student Development</h2>
+          <ul class="dev-list" id="acadDevList">
+            <!-- Populated dynamically via JS -->
+          </ul>
+        </div>
+        <div>
+          <span class="badge">Important Dates</span>
+          <h2>Academic Calendar Overview</h2>
+          <div style="overflow-x:auto;">
+            <table class="calendar-table">
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Key Events</th>
+                </tr>
+              </thead>
+              <tbody id="acadCalendarTbody">
+                <!-- Populated dynamically via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 12. FACULTY ========== -->
+    <section class="faculty-section reveal">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Our Educators</span>
+          <h2>Faculty Directory</h2>
+          <p>A team of dedicated, trained educators committing to high educational values and student care.</p>
+        </div>
+        <div class="faculty-grid" id="facultyDirectoryContainer">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 13. FINAL CTA ========== -->
+    <section class="academics-cta reveal">
+      <div class="container">
+        <h2>Explore Our Campus & Facilities</h2>
+        <p style="font-size:1.6rem; color:black; margin-bottom:var(--space-lg);">See the infrastructure that supports our academic excellence.</p>
+        <a href="facilities.html" class="btn btn-outline" style="background:#fff; color:var(--primary-dark); border-color:#fff;">View Facilities</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-column footer-about">
+        <h4 class="school-name">SVCS</h4>
+        <p class="school-tagline" style="color:rgba(255,255,255,0.7);"></p>
+        <p style="font-size:1.3rem;margin-top:10px;color:rgba(255,255,255,0.5);" class="school-board"></p>
+      </div>
+      <div class="footer-column footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="notices.html">Notice Board</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 <span class="school-address"></span></p>
+        <p>✉️ <a class="school-email" href=""></a></p>
+        <p>⏰ <span class="school-timings"></span></p>
+      </div>
+      <div class="footer-column footer-socials-col">
+        <h4>Connect</h4>
+        <div class="footer-socials">
+          <a class="footer-social-icon" id="footerFacebookLink" target="_blank" rel="noopener noreferrer" aria-label="Facebook">F</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 <span class="school-name">SVCS</span>. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Privacy Policy', '<p>Swami Vivekananda Centenary School respects the privacy of all students, parents, and visitors. This website is an informational portal and does not collect personal cookies or track user data without consent. Any inquiries sent through email are processed strictly for academic and administrative communication.</p>');}">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="if(window.SVCS_MODAL){window.SVCS_MODAL.open('Terms & Conditions', '<p>All content, notices, syllabus guidelines, and visual assets on this website are the property of Swami Vivekananda Centenary School, Chakdaha. Information provided is subject to periodic updates by the school administration under CISCE board guidelines.</p>');}">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <strong style="font-size:1.6rem;color:var(--primary);">SVCS</strong>
+      <button class="modal-close" id="mobileNavClose" aria-label="Close Navigation">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a class="active" href="academics.html">Academics</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="notices.html">Notice Board</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="contact.html#enquiry" style="margin-top:var(--space-md);width:100%;">Enquire Now</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <p class="school-board"></p>
+    </div>
+  </div>
+
+  <a href="#header" class="back-to-top" id="backToTop" aria-label="Back to Top">↑</a>
+
+  <script src="js/data/school.js"></script>
+  <script src="js/data/about.js"></script>
+  <script src="js/data/academics.js"></script>
+  <script src="js/data/facilities.js"></script>
+  <script src="js/data/achievements.js"></script>
+  <script src="js/data/faculty.js"></script>
+  <script src="js/data/notices.js"></script>
+  <script src="js/data/events.js"></script>
+  <script src="js/data/gallery.js"></script>
+  <script src="js/data/recruitment.js"></script>
+  <script src="js/data/testimonials.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
