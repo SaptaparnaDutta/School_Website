@@ -27,36 +27,95 @@
   background: linear-gradient(135deg, rgba(24, 50, 75, 0.88) 0%, rgba(24, 50, 75, 0.68) 55%, rgba(200, 149, 60, 0.42) 100%);
 }
 
+/* =========================================
+   HERO SECTION - CENTERED SCHOOL NAME
+========================================= */
+
 .hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 80px 0 60px;
-  max-width: 720px;
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 80px 20px 60px;
+
+    text-align: center;
 }
+
+/* School Name */
 
 .hero-content h1 {
-  color: #fff;
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-md);
-  line-height: 1.15;
+    color: #ffffff;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 20px auto 18px;
+
+    font-size: clamp(2.8rem, 3.5vw, 4.5rem);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    white-space: nowrap;
 }
+
+/* Hero Badge */
+
+.hero-content > .badge {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Tagline */
 
 .hero-tagline {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 1.8rem !important;
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: var(--space-lg) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+
+    font-size: 1.8rem !important;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    margin-bottom: var(--space-lg) !important;
 }
+
+/* Hero Buttons */
 
 .hero-actions {
-  display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-  margin-bottom: var(--space-lg);
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--space-md);
+
+    flex-wrap: wrap;
+
+    margin-bottom: var(--space-lg);
 }
 
+/* Location */
+
+.hero-location {
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    font-size: 1.4rem !important;
+
+    text-align: center;
+
+    margin-bottom: 0 !important;
+}
 .hero-btn-outline {
   color: #fff !important;
   border-color: rgba(255, 255, 255, 0.5) !important;
@@ -70,11 +129,6 @@
   border-color: #ffffff !important;
 }
 
-.hero-location {
-  color: rgba(255, 255, 255, 0.8) !important;
-  font-size: 1.4rem !important;
-  margin-bottom: 0 !important;
-}
 
 /* ==========================================================================
    2. TRUST STRIP
@@ -2600,4 +2654,63 @@
     .home-gallery-grid .gallery-item {
         height: 230px;
     }
+}
+/* =========================================
+   HERO RESPONSIVE
+========================================= */
+
+/* Desktop */
+
+@media (min-width: 1200px) {
+
+    .hero-content h1 {
+        white-space: nowrap;
+        font-size: clamp(3.2rem, 3.5vw, 4.5rem);
+    }
+
+}
+
+/* Tablet and Split Screen */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    .hero-content {
+        padding: 65px 15px 50px;
+    }
+
+    .hero-content h1 {
+        white-space: nowrap;
+
+        font-size: clamp(2rem, 3.5vw, 3.2rem);
+
+        line-height: 1.2;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        padding: 55px 15px 45px;
+    }
+
+    .hero-content h1 {
+        white-space: normal;
+
+        font-size: clamp(2.3rem, 7vw, 3.2rem);
+
+        line-height: 1.2;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
 }
