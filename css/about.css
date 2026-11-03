@@ -263,63 +263,133 @@
 /* ==========================================================================
    6. PRINCIPAL SECTION
    ========================================================================== */
+/* =========================================
+   PRINCIPAL SECTION - UPDATED
+========================================= */
+
 .about-principal-section {
-  background: var(--card);
-  padding-top: var(--space-xxl);
-  padding-bottom: var(--space-xxl);
+    background: var(--card);
+    padding-top: var(--space-xxl);
+    padding-bottom: var(--space-xxl);
 }
 
+/* Main Layout */
 .principal-full-grid {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: var(--space-xxl);
-  align-items: start;
+    display: grid;
+    grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+    gap: 55px;
+    align-items: center;
 }
 
+/* Principal Profile Card */
 .principal-profile {
-  background: var(--bg);
-  padding: var(--space-xl);
-  border-radius: var(--radius-lg);
-  text-align: center;
-  border: 1px solid var(--border);
+    width: 100%;
+    max-width: 380px;
+    min-width: 0;
+
+    margin: 0 auto;
+    padding: 28px 20px;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(24, 50, 75, 0.07);
 }
 
+/* Principal Image Wrapper */
+.principal-photo-wrapper {
+    width: 100%;
+    max-width: 300px;
+
+    height: 340px;
+
+    margin: 0 auto 22px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #f2f0eb;
+    border: 4px solid #ffffff;
+
+    box-shadow: 0 8px 24px rgba(24, 50, 75, 0.13);
+}
+
+/* Principal Image */
 .principal-photo {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  margin: 0 auto var(--space-lg);
-  background: linear-gradient(135deg, #F7F1E4, #E7EFE9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  color: var(--primary);
-  border: 4px solid #fff;
-  box-shadow: var(--shadow-md);
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 20%;
+
+    border-radius: 10px;
+
+    transition: transform 0.4s ease;
 }
 
-.principal-profile h3 {
-  font-size: 2.2rem;
-  margin-bottom: var(--space-xs);
+.principal-profile:hover .principal-photo {
+    transform: scale(1.035);
 }
 
+/* Principal Name */
+.principal-profile h3.principal-name {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 auto 12px;
+
+    color: var(--primary);
+
+    font-size: clamp(17px, 1.5vw, 23px);
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    overflow: visible;
+}
+
+/* Designation */
 .principal-profile .designation {
-  font-weight: 700;
-  color: var(--secondary);
-  margin-bottom: var(--space-xs);
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--secondary);
 }
 
+/* Qualification */
+.principal-profile .text-small {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Principal Message */
 .principal-message-content {
-  font-size: 1.6rem;
-  line-height: 1.8;
-  color: var(--text-muted);
+    min-width: 0;
+
+    font-size: 1.6rem;
+    line-height: 1.8;
+
+    color: var(--text-muted);
 }
 
 .principal-message-content p {
-  margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);
 }
-
 /* ==========================================================================
    7. MANAGEMENT SECTION
    ========================================================================== */
@@ -552,15 +622,78 @@
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
+/* =========================================
+   PRINCIPAL RESPONSIVE DESIGN
+========================================= */
+
+/* Tablet and Split Screen */
 @media (max-width: 1024px) {
-  .intro-grid, .principal-full-grid, .campus-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
-  .principal-profile {
-    max-width: 500px;
-    margin: 0 auto;
-  }
+
+    .principal-full-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .principal-profile {
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .principal-photo-wrapper {
+        max-width: 280px;
+        height: 320px;
+    }
+
+    .principal-profile h3.principal-name {
+        font-size: clamp(17px, 2.5vw, 22px);
+        white-space: nowrap;
+    }
+
+    .principal-message-content {
+        text-align: left;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .about-principal-section {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .principal-full-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .principal-profile {
+        max-width: 100%;
+        padding: 22px 12px;
+    }
+
+    .principal-photo-wrapper {
+        width: 100%;
+        max-width: 250px;
+        height: 290px;
+    }
+
+    .principal-profile h3.principal-name {
+        font-size: clamp(15px, 4.2vw, 20px);
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .principal-profile .designation {
+        font-size: 16px;
+    }
+
+    .principal-message-content {
+        font-size: 15px;
+        line-height: 1.8;
+    }
 }
 
 @media (max-width: 768px) {
