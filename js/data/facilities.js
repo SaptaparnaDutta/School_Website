@@ -44,7 +44,7 @@ window.SVCS_DATA.facilities = [
     title: "Safety & Security Systems",
     category: "Other",
     description: "Facility details and availability will be confirmed by the school administration.",
-    image: "assets/images/facilities/security.jpg"
+    image: "assets/images/facilities/svcs_safe_security_collage.jpg"
   }
 ];
 
