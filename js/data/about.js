@@ -4,7 +4,7 @@
 window.SVCS_DATA = window.SVCS_DATA || {};
 
 window.SVCS_DATA.principalMessage = {
-  name: "Sanjukta Chatterjee", // Publish after school confirmation
+  name: "Mrs. Sanjukta Bhattacharya", // Publish after school confirmation
   designation: "Principal",
   qualification: "",
   photo: "",
