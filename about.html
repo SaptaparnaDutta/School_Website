@@ -140,16 +140,39 @@
     <section class="section about-principal-section" id="principal">
       <div class="container">
         <div class="section-header text-center reveal" style="margin-bottom:var(--space-xl);">
-          <span class="badge">Leadership</span>
-          <h2>Principal's Welcome Address</h2>
+          <span class="badge">School Leadership</span>
+          <h2>Meet Our Principal</h2>
+          <p>Guiding students towards knowledge, discipline and excellence.</p>
         </div>
         <div class="principal-full-grid">
           <div class="principal-profile reveal">
-            <div class="principal-photo">👤</div>
-            <h3 id="aboutPrincipalName"></h3>
-            <p class="designation" id="aboutPrincipalRole">Principal</p>
-            <p class="text-small" id="aboutPrincipalQual"></p>
-          </div>
+
+    <!-- Principal Image -->
+    <div class="principal-photo-wrapper">
+        <img
+            id="aboutPrincipalPhoto"
+            class="principal-photo"
+            src="assets/images/about/principal.jpeg"
+            alt="Principal of Swami Vivekananda Centenary School"
+            loading="lazy"
+            decoding="async"
+        >
+    </div>
+
+    <!-- Principal Name -->
+    <h3 id="aboutPrincipalName" class="principal-name">
+        Principal Name
+    </h3>
+
+    <!-- Designation -->
+    <p class="designation" id="aboutPrincipalRole">
+        Principal
+    </p>
+
+    <!-- Qualification -->
+    <p class="text-small" id="aboutPrincipalQual"></p>
+
+</div>
           <div class="principal-message-content reveal" id="aboutPrincipalMessage">
             <!-- Rendered via JS -->
           </div>
